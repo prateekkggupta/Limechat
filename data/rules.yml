@@ -1,0 +1,46 @@
+version: "2.0"
+
+rules:
+
+
+
+- rule: FAQ for check in
+  steps:
+  - intent: check_in
+  - action: utter_check_in
+
+- rule: FAQ check out
+  steps:
+  - intent: check_out
+  - action: utter_check_out
+
+- rule: cancel reservation
+  steps:
+  - intent: cancel_reservations
+  - action: utter_cancel_reservations1
+  - action: utter_cancel_reservations2
+
+- rule: cancel policy
+  steps:
+  - intent: cancel_policy
+  - action: utter_cancel_policy
+
+- rule: restaurant
+  steps:
+  - intent: restaurant
+  - action: utter_restaurant
+
+- rule: breakfast available
+  steps:
+  - intent: breakfast_availability
+  - action: utter_breakfast_availability
+
+- rule: breakfast timing
+  steps:
+  - intent: breakfast_timings
+  - action: utter_breakfast_timings
+
+- rule: restaurant timings
+  steps:
+  - intent: restaurant_timings
+  - action: utter_restaurant_timings

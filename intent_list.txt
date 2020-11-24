@@ -1,0 +1,33 @@
+  - book_room
+  - clean_room
+  - clean_now
+  - clean_later
+  - check_in
+  - check_out
+  - cancel_reservations
+  - cancel_policy
+  - restaurant
+  - breakfast_availability
+  - breakfast_timings
+  - restaurant_timings
+  - bot_challenge
+
+
+  actions
+  utter_greet
+  utter_goodbye
+  utter_bot_challenge
+  utter_book_room
+  utter_room_type
+  utter_confirmation
+  utter_clean_room
+  utter_clean_now
+  utter_clean_later
+  utter_check_in
+  utter_check_out
+  utter_cancel_reservations  
+  utter_cancel_policy
+  utter_restaurant
+  utter_breakfast_availability:
+  utter_breakfast_timings:
+  utter_restaurant_timings:

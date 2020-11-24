@@ -1,0 +1,67 @@
+version: "2.0"
+
+stories:
+
+- story: room booking confirm
+  steps:
+  - intent: book_room
+  - action: utter_book_room
+  - intent: get_num
+  - action: utter_room_number_confirmed1
+  - intent: get_type
+  - action: utter_book_confirm
+
+- story: clean the room later
+  steps:
+  - intent: clean_room
+  - action: utter_clean_room
+  - intent: clean_later
+  - action: utter_clean_later
+
+- story: clean the room now
+  steps:
+  - intent: clean_room
+  - action: utter_clean_room
+  - intent: clean_now
+  - action: utter_clean_now
+
+- story: FAQ check in
+  steps:
+  - intent: check_in
+  - action: utter_check_in
+
+- story: FAQ check out
+  steps:
+  - intent: check_out
+  - action: utter_check_out
+
+- story: cancel reservation
+  steps:
+  - intent: cancel_reservations
+  - action: utter_cancel_reservations1
+  - action: utter_cancel_reservations2
+
+- story: cancel policy
+  steps:
+  - intent: cancel_policy
+  - action: utter_cancel_policy
+
+- story: restaurant
+  steps:
+  - intent: restaurant
+  - action: utter_restaurant
+
+- story: breakfast available
+  steps:
+  - intent: breakfast_availability
+  - action: utter_breakfast_availability
+
+- story: breakfast timing
+  steps:
+  - intent: breakfast_timings
+  - action: utter_breakfast_timings
+
+- story: restaurant timings
+  steps:
+  - intent: restaurant_timings
+  - action: utter_restaurant_timings

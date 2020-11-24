@@ -1,0 +1,86 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- book_room
+- get_num
+- book_simple
+- get_type
+- clean_now
+- clean_later
+- check_in
+- check_out
+- cancel_reservations
+- cancel_policy
+- restaurant
+- breakfast_availability
+- breakfast_timings
+- restaurant_timings
+- bot_challenge
+- clean_room
+entities:
+- type
+- num
+slots:
+  num:
+    type: float
+    influence_conversation: true
+    max_value: 1.0
+    min_value: 0.0
+  type:
+    type: categorical
+    influence_conversation: true
+    values:
+    - simple
+    - deluxe
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_goodbye:
+  - text: Bye
+  utter_bot_challenge:
+  - text: Yes, I am a bot.
+  utter_book_room:
+  - text: How many rooms would you like to book?
+  utter_room_number_confirmed1:
+  - buttons:
+    - payload: simple
+      title: simple
+    - payload: deluxe
+      title: deluxe
+    text: What type of room would you want to book?
+  utter_book_confirm:
+  - text: You have chosen to book {num} {type} rooms
+  utter_clean_room:
+  - text: When should I arrange for a cleaning?
+  utter_clean_now:
+  - text: Sure, I will send someone to your room right away.
+  utter_clean_later:
+  - text: Sure, I have scheduled a cleaning for 5 pm today.
+  utter_check_in:
+  - text: Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact
+      the reception for early check-in requests.
+  utter_check_out:
+  - text: Check-out time is 11 AM. Please contact the reception for late checkout
+      requests.
+  utter_cancel_reservations1:
+  - text: To cancel a reservation, select the “Reservations” link from the homepage.
+  utter_cancel_reservations2:
+  - text: On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’
+      enter your confirmation number, and either the last name on the reservation
+      or the last four digits of the credit card used to make the reservation.
+  utter_cancel_policy:
+  - text: The booking deposit is refundable if the cancellation occurs at least 15
+      days before arrival. For cancellations made after this limit, a penalty will
+      be imposed based on the cancellation policy
+  utter_restaurant:
+  - text: Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we
+      strive to reflect the historic art and the spirit of our neighborhood by offering
+      a glimpse into what makes our area unique.
+  utter_breakfast_availability:
+  - text: The hotel provides its guests with a free made-to-order breakfast each morning.
+  utter_breakfast_timings:
+  - text: Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday,
+      we are open from 7 am to 10:30 am.
+  utter_restaurant_timings:
+  - text: Our restaurant serves a dazzling 24-hour menu.
